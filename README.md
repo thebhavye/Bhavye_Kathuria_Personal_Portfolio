@@ -26,8 +26,8 @@ Deployment: GitHub Pages
 
 This project is deployed using GitHub Pages.
 
-Live Website: [Add your GitHub Pages link]
-Repository: [Add your GitHub repo link]
+Live Website: 
+Repository: 
 
 ---
 
