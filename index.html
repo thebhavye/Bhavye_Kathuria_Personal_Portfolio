@@ -3,60 +3,86 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Bhavye Kathuria - Full Stack Developer Portfolio" />
+  <meta name="description" content="Bhavye Kathuria – Aspiring Full Stack Developer | B.Tech CS @ VIT Vellore." />
   <meta name="author" content="Bhavye Kathuria" />
-  <title>Bhavye Kathuria | Portfolio</title>
+  <title>Bhavye Kathuria | Full Stack Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <nav id="navbar">
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <nav id="navbar" role="navigation" aria-label="Main Navigation">
     <div class="nav-inner">
-      <a href="#home" class="nav-logo">BK.</a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <a href="#home" class="nav-logo" aria-label="Home">BK<span class="dot">.</span></a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <section id="home">
-    <h1>Bhavye Kathuria</h1>
-    <p>Full Stack Developer | B.Tech CSE @ VIT Vellore</p>
-    <p>Building scalable applications and real-world tech solutions.</p>
-    <a href="#projects">View My Work</a>
+  <section id="home" class="hero" aria-label="Hero">
+    <div class="hero-bg-grid" aria-hidden="true"></div>
+    <div class="hero-glow" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow fade-up">Hello, I'm</p>
+      <h1 class="hero-name fade-up">Bhavye<br /><span class="accent">Kathuria</span></h1>
+      <div class="hero-role fade-up">
+        <span class="role-prefix">—&nbsp;</span>
+        <span id="typed-text" aria-live="polite"></span>
+        <span class="cursor" aria-hidden="true">|</span>
+      </div>
+      <p class="hero-tagline fade-up">
+        Building scalable applications and real-world tech solutions.<br />
+        B.Tech CSE @ <span class="highlight">VIT Vellore</span>
+      </p>
+      <div class="hero-cta fade-up">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
   </section>
 
   <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I'm a second-year B.Tech Computer Science student at VIT Vellore (Reg: 24BCE0832),
-      focused on becoming a Full Stack Developer. I enjoy building real-world
-      applications and solving problems through clean, scalable code.
-    </p>
   </section>
 
   <section id="skills">
-    <h2>Skills</h2>
   </section>
 
   <section id="projects">
-    <h2>Projects</h2>
   </section>
 
   <section id="experience">
-    <h2>Experience</h2>
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
   </section>
 
-  <footer>
-    <p>Designed & Built by Bhavye Kathuria &copy; 2025</p>
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <span class="footer-logo">BK<span class="dot">.</span></span>
+      <p class="footer-text">Designed &amp; Built by <strong>Bhavye Kathuria</strong> · VIT Vellore · 24BCE0832</p>
+      <p class="footer-copy">© 2025 · All rights reserved</p>
+    </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
