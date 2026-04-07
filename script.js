@@ -163,8 +163,8 @@ const sectionObserver = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.35,
-    rootMargin: "-60px 0px -40% 0px",
+    threshold: 0,
+    rootMargin: "-60px 0px -55% 0px",
   }
 );
 
@@ -185,5 +185,14 @@ staggerParents.forEach((parent) => {
   const children = parent.querySelectorAll(".reveal");
   children.forEach((child, i) => {
     child.style.transitionDelay = `${i * 0.1}s`;
+  });
+});
+const semesterBlocks = document.querySelectorAll(".semester-block");
+
+semesterBlocks.forEach((block) => {
+  const toggle = block.querySelector(".semester-toggle");
+  toggle.addEventListener("click", () => {
+    const isOpen = block.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", isOpen.toString());
   });
 });
